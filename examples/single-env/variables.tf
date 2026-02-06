@@ -1,48 +1,44 @@
+
 variable "aws_region" {
   description = "AWS region"
   type        = string
-  default     = "us-west-2"
+  default     = "us-east-1"
 }
 
 variable "project_name" {
   description = "Project name prefix"
   type        = string
-  default     = "my-app"
+  default     = "my-web-app"
 }
 
 variable "environment" {
   description = "Environment name"
   type        = string
-  default     = "prod"
-
-  validation {
-    condition     = var.environment == "prod"
-    error_message = "environment must be set to prod in this directory."
-  }
+  default     = "dev"
 }
 
 variable "vpc_cidr" {
   description = "VPC CIDR block"
   type        = string
-  default     = "10.30.0.0/16"
+  default     = "10.0.0.0/16"
 }
 
 variable "public_subnet_cidr" {
   description = "Public subnet CIDR block"
   type        = string
-  default     = "10.30.1.0/24"
+  default     = "10.0.1.0/24"
 }
 
 variable "instance_type" {
   description = "EC2 instance type"
   type        = string
-  default     = "t3.medium"
+  default     = "t3.micro"
 }
 
 variable "instance_count" {
   description = "EC2 instance count"
   type        = number
-  default     = 2
+  default     = 1
 }
 
 variable "ami_id" {

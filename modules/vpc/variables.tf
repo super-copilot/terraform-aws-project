@@ -15,4 +15,10 @@ variable "subnet_cidr" {
   default     = "10.0.1.0/24"
 }
 
+variable "tags" {
+  description = "可选：额外标签（会与 Provider default_tags 合并；Name 标签由模块设置）"
+  type        = map(string)
+  default     = {}
+  nullable    = false
+}
 

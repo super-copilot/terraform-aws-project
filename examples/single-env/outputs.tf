@@ -18,11 +18,6 @@ output "ec2_public_ips" {
   value       = module.ec2.public_ips
 }
 
-output "security_group_id" {
-  description = "EC2 security group ID"
-  value       = module.ec2.security_group_id
-}
-
 output "s3_bucket_name" {
   description = "S3 bucket name"
   value       = module.s3.bucket_name

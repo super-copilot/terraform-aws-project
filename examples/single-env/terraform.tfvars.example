@@ -1,0 +1,25 @@
+# --- Basic ---
+aws_region   = "us-east-1"
+project_name = "my-awesome-app"
+environment  = "dev"
+
+# --- Network ---
+vpc_cidr            = "10.0.0.0/16"
+public_subnet_cidr  = "10.0.1.0/24"
+
+# --- EC2 ---
+instance_type            = "t3.micro"
+instance_count           = 1
+ssh_ingress_cidr_blocks  = ["203.0.113.10/32"]
+
+# --- S3 ---
+# 注意：Bucket 名称需要全局唯一
+s3_bucket_name           = "my-awesome-app-dev-bucket"
+s3_versioning_enabled    = true
+s3_force_destroy         = false
+s3_sse_algorithm         = "AES256"
+s3_kms_key_id            = null
+
+extra_tags = {
+  Owner = "your-name"
+}
